@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+  --Bright_orange: hsl(31, 77%, 52%);
+  --Dark_cyan: hsl(184, 100%, 22%);
+  --Very_dark_cyan: hsl(179, 100%, 13%);
+  --Transparent_white : hsla(0, 0%, 100%, 0.75);
+  --Very_light_gray : hsl(0, 0%, 95%);
+  --font-title: Big Shoulders Display;
+  --font-paragraph: Lexend Deca;
+
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    padding: 20px 5px;
+    max-width: 800px;
+    margin:  0px auto;
+    overflow: hidden;
+}
+
+.section-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 100%;
+    height: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card img{
+    width: 70px;
+}
+
+.card_title{
+    color: var(--Very_light_gray);
+    font-size: 35px;
+    font-family: var(--font-title);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card_paragraph{
+    color: var(--Transparent_white);
+    font-size: 15px;
+}
+
+.card:first-child{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card:last-child{
+    border-radius: 0px 0px 10px 10px;
+}
+
+.card__orange{
+    background-color: var(--Bright_orange);
+}
+
+.card__cyan {
+    background-color: var(--Dark_cyan);
+    color: var(--Dark_cyan);
+}
+
+.card__dark{
+    background-color: var(--Very_dark_cyan);
+}
+
+.cta_button{
+  width: 90px;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-paragraph);
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  display: block;
+
+}
+
+.cta_button:hover{
+    border: 1px solid;
+    background-color: transparent;
+    color: white;
+}
+
+.button-orange{
+    color: var(--Bright_orange);
+}
+
+.button-cyan{
+    color: var(--Dark_cyan);
+}
+
+.button-dark{
+    color: var(--Very_dark_cyan);
+}
+
+@media (min-width:375px) {
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-cards{
+        flex-direction: row;
+    }
+
+    .card:first-child{
+        border-radius: 10px 0px 0px 10px;
+    }
+    
+    .card:last-child{
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .cta_button{
+        width: 120px;
+        font-size: 15px;
+    }
+    
+}
